@@ -27,3 +27,13 @@ Zachary Hill        email: zhill003@ucr.edu
    The code for the project will be in C++ using Linux as the source for typing all code and sending them to Github 
    where all our classes can be merged. Mahdi will be focusing on Composite Design Patterns, Krishna will use Abstract 
    Factory Design Patterns, and Zach is going to implement Decorator Design Patterns.
+
+   Abstract Factory Design:
+   
+   
+   Decorator Design:
+   
+   
+   Visitor Design:
+   
+   

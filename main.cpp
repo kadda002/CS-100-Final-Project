@@ -1,17 +1,19 @@
 #include <iostream>
 
 #include "toppings/toppings.hpp"
+#include "pizza.hpp"
+#include "order.hpp"
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	Pizza* pizza = new Pizza();
-	string choice_topping;
+	Pizza* pizza;
 	bool add_more = true;
 
-	while(valid_topping) {
+	while(add_more) {
 		cout << "Enter any (more) toppings from the list you wish to add to your pizza, or enter N if not: " << endl;
-		// cin >> choice_topping;
+		ToppingsDecorator* choice_topping = new ToppingsDecorator(argv,argc);
+		
 		switch(choice_topping) {
 			case Anchovy:
 				pizza = new Anchovy(pizza); break;

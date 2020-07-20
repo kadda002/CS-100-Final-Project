@@ -2,12 +2,12 @@
 
 #include "toppings/toppings.hpp"
 #include "pizza.hpp"
-#include "order.hpp"
+//#include "order.hpp"
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	Pizza* pizza;
+	/*Pizza* pizza;
 	//ToppingsDecorator* choice_topping = new ToppingsDecorator(argv,argc);
 	string choice;
 	bool add_more = true;
@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
 	while(add_more) {
 		cout << "Enter any (more) toppings from the list you wish to add to your pizza, or enter N if not: " << endl;
 		cin >> choice;
-		
+
 		switch(choice) {
 			case "Anchovy":
 				pizza = new Anchovy(pizza); break;
@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
 			default:
 				cout << "Invalid Input!!" <<endl;
 		}
-	}
+	}*/
 
 	return 0;
 }

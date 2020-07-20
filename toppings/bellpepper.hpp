@@ -5,13 +5,16 @@
 #include <string>
 
 class BellPepper : public ToppingsDecorator{
+	private:
+		std::string topping_name = " YellowBellPepper";
+		double topping_cost = 1.55; 
 	public:
 		//Constructor
-		BellPepper(Pizza *ybp):ToppingsDecorator(ybp) {};
+		BellPepper(Pizza *bell):ToppingsDecorator(bell) {};
 
 		//Functions
-		std::string get_topping() { return top->get_topping() + ", Yellow Bell Peppers"; }
-		double get_cost() { return top->get_cost() + 1.55; }
+		std::string get_topping() { return topping_name; }
+		double get_cost() { return topping_cost; }
 		
 };
 

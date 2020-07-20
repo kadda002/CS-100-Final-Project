@@ -7,62 +7,63 @@
 
 #include "../pizza.hpp"
 #include "toppings_decorator.hpp"
+#include "toppings.hpp"
 
 //***************************
 // Decorator Tests
 //***************************
 
 TEST(ToppingsTest, DecorateTest1) {
-	Pizza* topp = new Pizza();
+	Pizza* topp = new ToppingsDecorator();
 	Anchovy* anch = new Anchovy(topp);
 
-	EXPECT_EQ(anch->get_topping, ", Anchovies");
+	EXPECT_EQ(anch->get_topping(), " Anchovy");
 	EXPECT_EQ(anch->get_cost(), 4.10);
+	
+	BellPepper* bell = new BellPepper(topp);
 
-	Bellpepper* bell = new Bellpepper(topp);
-
-        EXPECT_EQ(bell->get_topping, ", Yellow Bell Peppers");
+        EXPECT_EQ(bell->get_topping(), " YellowBellPepper");
         EXPECT_EQ(bell->get_cost(), 1.55);
 }
 
 TEST(ToppingsTest, DecorateTest2) {
-        Pizza* topp = new Pizza();
+        Pizza* topp = new ToppingsDecorator();
         Chicken* chicken = new Chicken(topp);
 
-        EXPECT_EQ(chicken->get_topping, ", Chicken");
+        EXPECT_EQ(chicken->get_topping(), " Chicken");
         EXPECT_EQ(chicken->get_cost(), 2.35);
 
         Meatball* mb = new Meatball(topp);
 	Mushroom* mush = new Mushroom(mb);
-        EXPECT_EQ(mush->get_topping, ", Meatballs, Mushrooms");
-        EXPECT_EQ(mush->get_cost(), 3.90);
+        EXPECT_EQ(mush->get_topping(), " Mushroom");
+        EXPECT_EQ(mush->get_cost(), 1.55);
 }
 
 TEST(ToppingsTest, DecorateTest3) {
-        Pizza* topp = new Pizza();
+        Pizza* topp = new ToppingsDecorator();
         Pepperoni* pepp = new Pepperoni(topp);
 	Spinach* spinach = new Spinach(pepp);
 
-        EXPECT_EQ(spinach->get_topping, ", Pepperonis, Spinach");
-        EXPECT_EQ(spinach->get_cost(), 3.90);
+        EXPECT_EQ(spinach->get_topping(), " Spinach");
+        EXPECT_EQ(spinach->get_cost(), 1.55);
 
         Olive* olive = new Olive(pepp);
-	Onion* onion = new Onion(olive);
+	Onion* onion = new Onion(onion);
 
-        EXPECT_EQ(onion->get_topping, ", Pepperonis, Olives, Onions");
-        EXPECT_EQ(onion->get_cost(), 5.45);
+        EXPECT_EQ(onion->get_topping(), " Onion");
+        EXPECT_EQ(onion->get_cost(), 1.55);
 }
 
 TEST(ToppingsTest, DecorateTest4) {
-        Pizza* topp = new Pizza();
+        Pizza* topp = new ToppingsDecorator();
         Pepperoni* pepp = new Pepperoni(topp);
 	Salami* sal = new Salami(pepp);
 	Tomato* tom = new Tomato(sal);
 	Tuna* tuna = new Tuna(tom);
 	Olive* olive = new Olive(tuna);
 
-        EXPECT_EQ(olive->get_topping, ", Pepperonis, Salami, Dried Tomatoes, Tuna, Olives");
-        EXPECT_EQ(olive->get_cost(), 11.90);
+        EXPECT_EQ(olive->get_topping(), " Olive");
+        EXPECT_EQ(olive->get_cost(), 1.55);
 }
 
 //***************************
@@ -76,9 +77,10 @@ TEST(ToppingsTest, ValidInputTest) {
 		argv.push_back((char*)arg.data());
 	argv.push_back(nullptr);
 
-	Pizza *topping = add_top(argv.data(), argv.size());
+	Pizza *topping = add_top(argv.data(), argv.size()-1);
 	
 	EXPECT_EQ(topping->get_topping(), "Meatball");
+	EXPECT_EQ(topping->get_cost(), 2.35);
 	
 }
 
@@ -90,7 +92,7 @@ TEST(ToppingsTest, InvalidInputTest) {
                 argv1.push_back((char*)arg1.data());
         argv1.push_back(nullptr);
 
-        Pizza *topping = add_top(argv1.data(), argv1.size());
+        Pizza *topping = add_top(argv1.data(), argv1.size()-1);
 
         EXPECT_EQ(topping, nullptr);
 
@@ -101,7 +103,7 @@ TEST(ToppingsTest, InvalidInputTest) {
                 argv2.push_back((char*)arg2.data());
         argv2.push_back(nullptr);
 
-        topping = add_top(argv2.data(), argv2.size());
+        topping = add_top(argv2.data(), argv2.size()-1);
 
         EXPECT_EQ(topping, nullptr);
 
@@ -112,7 +114,7 @@ TEST(ToppingsTest, InvalidInputTest) {
                 argv3.push_back((char*)arg3.data());
         argv3.push_back(nullptr);
 
-        topping = add_top(argv3.data(), argv3.size());
+        topping = add_top(argv3.data(), argv3.size()-1);
 
         EXPECT_EQ(topping, nullptr);	
 
@@ -123,7 +125,7 @@ TEST(ToppingsTest, InvalidInputTest) {
                 argv4.push_back((char*)arg4.data());
         argv4.push_back(nullptr);
 
-        topping = add_top(argv4.data(), argv4.size());
+        topping = add_top(argv4.data(), argv4.size()-1);
 
         EXPECT_EQ(topping, nullptr);
 

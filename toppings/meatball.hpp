@@ -5,13 +5,16 @@
 #include <string>
 
 class Meatball : public ToppingsDecorator{
+	private:
+		std::string topping_name = " Meatball";
+		double topping_cost = 2.35; 
 	public:
 		//Constructor
 		Meatball(Pizza *mb):ToppingsDecorator(mb) {};
 
 		//Functions
-		std::string get_topping() { return top->get_topping() + ", Meatballs"; }
-		double get_cost() { return top->get_cost() + 2.35; }
+		std::string get_topping() { return topping_name; }
+		double get_cost() { return topping_cost; }
 		
 };
 

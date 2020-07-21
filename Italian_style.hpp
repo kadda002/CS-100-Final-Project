@@ -18,7 +18,7 @@ class Italian_Style_Pizza : public Pizza_Factory {
                 	return new Italian_Sauce();
                 };
                 Cheese* get_Cheese(){
-                	return new Layered_Mozzarella_Cheese();
+                	return new Mixed_Cheese();
                 };
                 Base_Pizza* get_pizza(){
                 	Base_Pizza* pizza = new Base_Pizza("Italian Style Pizza");

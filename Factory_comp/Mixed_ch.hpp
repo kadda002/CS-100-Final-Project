@@ -7,7 +7,7 @@
 using namespace std;
 class Mixed_Cheese: public Cheese{
 	public:
-	Mixed_Cheese(): Cheese("Mixed Cheese", 3.50){};
+	Mixed_Cheese(): Cheese("Mixed Cheese", 4.50){};
         
 };
 

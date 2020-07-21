@@ -1,5 +1,5 @@
 #include <iostream>
-
+/*
 #include "Factory_comp/Cheese.hpp"
 #include "Factory_comp/Chunky_red.hpp"
 #include "Factory_comp/Crust.hpp"
@@ -12,6 +12,9 @@
 #include "Factory_comp/Sauce.hpp"
 #include "Factory_comp/Thick_cr.hpp"
 #include "Factory_comp/Thin_cr.hpp"
+*/
+#include "Factory_comp/components.hpp"
+
 #include "basic_pizza.hpp"
 #include "pizza_factory.hpp"
 #include "Chicago_style.hpp"
@@ -29,7 +32,7 @@ int main() {
 		cin >> number;
 		if (number == 1)
 		{
-				f_pizza = new Chicago_Style_Pizza;
+			f_pizza = new Chicago_Style_Pizza;
 		}
 		else if (number == 2)
 		{

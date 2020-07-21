@@ -9,7 +9,7 @@ ADD_EXECUTABLE(test
 )
 
 ADD_EXECUTABLE(project
-    main.cpp
+    main_pizza_factory.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

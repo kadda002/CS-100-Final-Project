@@ -2,6 +2,7 @@
 #define __TOPPINGS_DECORATOR_HPP__
 
 #include "../pizza_decorator.hpp"
+#include <iostream>
 #include <string>
 
 class ToppingsDecorator : public Pizza_Decorator {
@@ -11,12 +12,12 @@ class ToppingsDecorator : public Pizza_Decorator {
 	public:
 		//Constructors
 		ToppingsDecorator() {};
-		ToppingsDecorator(Pizza_Decorator *t) { this->top = t; }
+		ToppingsDecorator(Pizza_Decorator *t) { top = t; }
 		
 		//Functions
-		std::string get_topping() { return this->top->get_topping(); }
-		double get_cost() { return this->top->get_cost(); }
-		
+		virtual std::string get_topping() { return top->get_topping(); }
+		virtual double get_cost() { return top->get_cost(); }
+		virtual void traverse() { top->traverse(); }
 };
 
 #endif	// __TOPPINGS_DECORATOR_HPP__

@@ -65,8 +65,8 @@ TEST(ToppingsTest, DecorateTest5) {
         Pizza_Decorator* topp = new ToppingsDecorator();
         Chicken* chicken = new Chicken(topp);
 
-        EXPECT_EQ(chicken->get_topping(), " Chicken");
-        EXPECT_EQ(chicken->get_cost(), 2.35);
+        EXPECT_EQ(topp->get_topping(), " Chicken");
+        EXPECT_EQ(topp->get_cost(), 2.35);
 
         Meatball* mb = new Meatball(topp);
         Mushroom* mush = new Mushroom(mb);

@@ -14,11 +14,11 @@ class Onion : public ToppingsDecorator{
 		Onion(Pizza_Decorator *onion):ToppingsDecorator(onion) {};
 
 		//Functions
-		std::string get_topping() { return top->topping_name; }
-		double get_cost() { return top->topping_cost; }
+		std::string get_topping() { return topping_name; }
+		double get_cost() { return topping_cost; }
 		void traverse() {
-                        ToppingsDecorator->traverse();
-                        cout << get_topping() << " ";
+                        //ToppingsDecorator->traverse();
+                        cout << top->get_topping() << " ";
                 }
 };
 

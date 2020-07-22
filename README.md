@@ -32,7 +32,7 @@ Zachary Hill        email: zhill003@ucr.edu
    
    
    Decorator Design:
-   
+      The Decorator class is primarily focused on adding the toppings to the base pizza chosen by the user. We have twelve classes each containing a different topping(2 sea foods, 3 meats, and 7 veggies) which can be added to a pizza multiple times but the name is only called once.
    
    Visitor Design:
    

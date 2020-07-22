@@ -10,7 +10,7 @@ class Onion : public ToppingsDecorator{
 		double topping_cost = 1.55; 
 	public:
 		//Constructor
-		Onion(Pizza *onion):ToppingsDecorator(onion) {};
+		Onion(Pizza_Decorator *onion):ToppingsDecorator(onion) {};
 
 		//Functions
 		std::string get_topping() { return topping_name; }

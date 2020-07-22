@@ -10,7 +10,7 @@ class Mushroom : public ToppingsDecorator{
 		double topping_cost = 1.55; 
 	public:
 		//Constructor
-		Mushroom(Pizza *mush):ToppingsDecorator(mush) {};
+		Mushroom(Pizza_Decorator *mush):ToppingsDecorator(mush) {};
 		
 		//Functions
 		std::string get_topping() { return topping_name; }

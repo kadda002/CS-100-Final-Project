@@ -10,7 +10,7 @@ class Tuna : public ToppingsDecorator{
 		double topping_cost = 4.10; 
 	public:
 		//Constructor
-		Tuna(Pizza *tuna):ToppingsDecorator(tuna) {};
+		Tuna(Pizza_Decorator *tuna):ToppingsDecorator(tuna) {};
 
 		//Functions
 		std::string get_topping() { return topping_name; }

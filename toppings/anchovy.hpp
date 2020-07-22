@@ -10,7 +10,7 @@ class Anchovy : public ToppingsDecorator{
 		double topping_cost = 4.10; 
 	public:
 		//Constructor
-		Anchovy(Pizza *anch):ToppingsDecorator(anch) {};
+		Anchovy(Pizza_Decorator *anch):ToppingsDecorator(anch) {};
 
 		//Functions
 		std::string get_topping() { return topping_name; }

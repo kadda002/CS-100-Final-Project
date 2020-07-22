@@ -10,7 +10,7 @@ class Pepperoni : public ToppingsDecorator{
 		double topping_cost = 2.35; 
 	public:
 		//Constructor
-		Pepperoni(Pizza *pepp):ToppingsDecorator(pepp) {};
+		Pepperoni(Pizza_Decorator *pepp):ToppingsDecorator(pepp) {};
 
 		//Functions
 		std::string get_topping() { return topping_name; }

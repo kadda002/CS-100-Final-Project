@@ -18,7 +18,7 @@ TEST(ToppingsTest, DecorateTest1) {
 	Pizza_Decorator* topp = new ToppingsDecorator();
 	Anchovy* anch = new Anchovy(topp);
 
-	EXPECT_EQ(anch->get_topping(), " Anchovy");
+	EXPECT_EQ(anch->get_topping(), "Anchovy ");
 	EXPECT_EQ(anch->get_cost(), 4.10);
 }
 
@@ -26,25 +26,25 @@ TEST(ToppingsTest, DecorateTest2) {
         Pizza_Decorator* topp = new ToppingsDecorator();
         Anchovy* anch = new Anchovy(topp);
 
-        EXPECT_EQ(anch->get_topping(), " Anchovy");
+        EXPECT_EQ(anch->get_topping(), "Anchovy ");
         EXPECT_EQ(anch->get_cost(), 4.10);
 
         BellPepper* bell = new BellPepper(topp);
 
-        EXPECT_EQ(bell->get_topping(), " YellowBellPepper");
+        EXPECT_EQ(bell->get_topping(), "YellowBellPepper ");
         EXPECT_EQ(bell->get_cost(), 1.55);
 }
 
 TEST(ToppingsTest, DecorateTest3) {
         Pizza_Decorator* topp = new ToppingsDecorator();
-        Chicken* anch = new Chicken(topp);
+        Chicken* chicken = new Chicken(topp);
 
-        EXPECT_EQ(anch->get_topping(), " Chicken");
-        EXPECT_EQ(anch->get_cost(), 2.35);
+        EXPECT_EQ(chicken->get_topping(), "Chicken ");
+        EXPECT_EQ(chicken->get_cost(), 2.35);
 
         BellPepper* bell = new BellPepper(topp);
 
-        EXPECT_EQ(bell->get_topping(), " YellowBellPepper");
+        EXPECT_EQ(bell->get_topping(), "YellowBellPepper ");
         EXPECT_EQ(bell->get_cost(), 1.55);
 }
 
@@ -52,12 +52,12 @@ TEST(ToppingsTest, DecorateTest4) {
         Pizza_Decorator* topp = new ToppingsDecorator();
         Chicken* chicken = new Chicken(topp);
 
-        EXPECT_EQ(chicken->get_topping(), " Chicken");
+        EXPECT_EQ(chicken->get_topping(), "Chicken ");
         EXPECT_EQ(chicken->get_cost(), 2.35);
 
         Meatball* mb = new Meatball(topp);
 	Mushroom* mush = new Mushroom(mb);
-        EXPECT_EQ(mush->get_topping(), " Mushroom");
+        EXPECT_EQ(mush->get_topping(), "Mushroom ");
         EXPECT_EQ(mush->get_cost(), 1.55);
 }
 
@@ -65,12 +65,12 @@ TEST(ToppingsTest, DecorateTest5) {
         Pizza_Decorator* topp = new ToppingsDecorator();
         Chicken* chicken = new Chicken(topp);
 
-        EXPECT_EQ(chicken->get_topping(), " Chicken");
+        EXPECT_EQ(chicken->get_topping(), "Chicken ");
         EXPECT_EQ(chicken->get_cost(), 2.35);
 
         Meatball* mb = new Meatball(topp);
         Mushroom* mush = new Mushroom(mb);
-        EXPECT_EQ(mb->get_topping(), " Meatball");
+        EXPECT_EQ(mb->get_topping(), "Meatball ");
         EXPECT_EQ(mb->get_cost(), 2.35);
 }
 
@@ -79,13 +79,13 @@ TEST(ToppingsTest, DecorateTest6) {
         Pepperoni* pepp = new Pepperoni(topp);
 	Spinach* spinach = new Spinach(pepp);
 
-        EXPECT_EQ(spinach->get_topping(), " Spinach");
+        EXPECT_EQ(spinach->get_topping(), "Spinach ");
         EXPECT_EQ(spinach->get_cost(), 1.55);
 
         Olive* olive = new Olive(pepp);
 	Onion* onion = new Onion(onion);
 
-        EXPECT_EQ(onion->get_topping(), " Onion");
+        EXPECT_EQ(onion->get_topping(),  "Onion ");
         EXPECT_EQ(onion->get_cost(), 1.55);
 }
 
@@ -94,13 +94,13 @@ TEST(ToppingsTest, DecorateTest7) {
         Pepperoni* pepp = new Pepperoni(topp);
         Spinach* spinach = new Spinach(pepp);
 
-        EXPECT_EQ(spinach->get_topping(), " Spinach");
+        EXPECT_EQ(spinach->get_topping(), "Spinach ");
         EXPECT_EQ(spinach->get_cost(), 1.55);
 
         Olive* olive = new Olive(pepp);
         Onion* onion = new Onion(onion);
 
-        EXPECT_EQ(olive->get_topping(), " Olive");
+        EXPECT_EQ(olive->get_topping(), "Olive ");
         EXPECT_EQ(olive->get_cost(), 1.55);
 }
 
@@ -109,13 +109,13 @@ TEST(ToppingsTest, DecorateTest8) {
         Pepperoni* pepp = new Pepperoni(topp);
         Spinach* spinach = new Spinach(pepp);
 
-        EXPECT_EQ(pepp->get_topping(), " Pepperoni");
+        EXPECT_EQ(pepp->get_topping(), "Pepperoni ");
         EXPECT_EQ(pepp->get_cost(), 2.35);
 
         Olive* olive = new Olive(pepp);
         Onion* onion = new Onion(onion);
 
-        EXPECT_EQ(onion->get_topping(), " Onion");
+        EXPECT_EQ(onion->get_topping(), "Onion ");
         EXPECT_EQ(onion->get_cost(), 1.55);
 }
 
@@ -124,13 +124,13 @@ TEST(ToppingsTest, DecorateTest9) {
         Pepperoni* pepp = new Pepperoni(topp);
         Spinach* spinach = new Spinach(pepp);
 
-        EXPECT_EQ(pepp->get_topping(), " Pepperoni");
+        EXPECT_EQ(pepp->get_topping(), "Pepperoni ");
         EXPECT_EQ(pepp->get_cost(), 2.35);
 
         Olive* olive = new Olive(pepp);
         Onion* onion = new Onion(onion);
 
-        EXPECT_EQ(olive->get_topping(), " Olive");
+        EXPECT_EQ(olive->get_topping(), "Olive ");
         EXPECT_EQ(olive->get_cost(), 1.55);
 }
 
@@ -142,7 +142,7 @@ TEST(ToppingsTest, DecorateTest10) {
 	Tuna* tuna = new Tuna(tom);
 	Olive* olive = new Olive(tuna);
 
-        EXPECT_EQ(olive->get_topping(), " Olive");
+        EXPECT_EQ(olive->get_topping(), "Olive ");
         EXPECT_EQ(olive->get_cost(), 1.55);
 }
 
@@ -154,7 +154,7 @@ TEST(ToppingsTest, DecorateTest11) {
         Tuna* tuna = new Tuna(tom);
         Olive* olive = new Olive(tuna);
 
-        EXPECT_EQ(tuna->get_topping(), " Tuna");
+        EXPECT_EQ(tuna->get_topping(), "Tuna ");
         EXPECT_EQ(tuna->get_cost(), 4.10);
 }
 
@@ -166,7 +166,7 @@ TEST(ToppingsTest, DecorateTest12) {
         Tuna* tuna = new Tuna(tom);
         Olive* olive = new Olive(tuna);
 
-        EXPECT_EQ(tom->get_topping(), " DriedTomato");
+        EXPECT_EQ(tom->get_topping(), "DriedTomato ");
         EXPECT_EQ(tom->get_cost(), 1.55);
 }
 
@@ -178,7 +178,7 @@ TEST(ToppingsTest, DecorateTest13) {
         Tuna* tuna = new Tuna(tom);
         Olive* olive = new Olive(tuna);
 
-        EXPECT_EQ(sal->get_topping(), " Salami");
+        EXPECT_EQ(sal->get_topping(), "Salami ");
         EXPECT_EQ(sal->get_cost(), 2.35);
 }
 
@@ -190,7 +190,7 @@ TEST(ToppingsTest, DecorateTest14) {
         Tuna* tuna = new Tuna(tom);
         Olive* olive = new Olive(tuna);
 
-        EXPECT_EQ(pepp->get_topping(), " Pepperoni");
+        EXPECT_EQ(pepp->get_topping(), "Pepperoni ");
         EXPECT_EQ(pepp->get_cost(), 2.35);
 }
 

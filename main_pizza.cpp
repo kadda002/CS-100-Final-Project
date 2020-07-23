@@ -16,8 +16,9 @@ using namespace std;
 int main(int argc, char** argv) {
 	Pizza* d_pizza;
 
-	Anchovy* anch; BellPepper* bell; Chicken* chicken; Meatball* mb; Mushroom* mush; Olive* olive;
-        Onion* onion; Pepperoni* pepp; Salami* sal; Spinach* spinach; Tomato* tom; Tuna* tuna;
+	Anchovy* anch = new Anchovy(d_pizza); BellPepper* bell = new BellPepper(d_pizza); Chicken* chicken = new Chicken(d_pizza); Meatball* mb = new Meatball(d_pizza); 
+	Mushroom* mush = new Mushroom(d_pizza); Olive* olive = new Olive(d_pizza); Onion* onion = new Onion(d_pizza); Pepperoni* pepp = new Pepperoni(d_pizza); 
+	Salami* sal = new Salami(d_pizza); Spinach* spinach = new Spinach(d_pizza); Tomato* tom = new Tomato(d_pizza); Tuna* tuna = new Tuna(d_pizza);
 
 	Pizza_Factory* f_pizza;
         int choice = 0;
@@ -48,19 +49,19 @@ int main(int argc, char** argv) {
                 Base_Pizza* pizza = f_pizza -> get_pizza();
                 pizza -> test_details();
 
-                        cout << " Topping Name          Topping Price" << endl;
-                        cout << " ------------------    --------------" << endl;
+                        cout << " Topping Name           Topping Price" << endl;
+                        cout << " -------------------    --------------" << endl;
                         cout << "1." << anch->get_topping() << setw(19) << "$" << anch->get_cost() << endl;
                         cout << "2." << bell->get_topping() << setw(8) << "$" << bell->get_cost() << endl;
                         cout << "3." << chicken->get_topping() << setw(19) << "$"  << chicken->get_cost() << endl;
-                        cout << "4." << mb->get_topping() << setw(19) << "$" << mb->get_cost() << endl;
+                        cout << "4." << mb->get_topping() << setw(18) << "$" << mb->get_cost() << endl;
                         cout << "5." << mush->get_topping() << setw(18) << "$" << mush->get_cost() << endl;
                         cout << "6." << olive->get_topping() << setw(21) << "$" << olive->get_cost() << endl;
                         cout << "7." << onion->get_topping() << setw(21) << "$" << onion->get_cost() << endl;
                         cout << "8." << pepp->get_topping() << setw(17) << "$" << pepp->get_cost() << endl;
                         cout << "9." << sal->get_topping() << setw(20) << "$" << sal->get_cost() << endl;
                         cout << "10." << spinach->get_topping() << setw(18) << "$" << spinach->get_cost() << endl;
-                        cout << "11." << tom->get_topping() << setw(10) << "$" << tom->get_cost() << endl;
+                        cout << "11." << tom->get_topping() << setw(13) << "$" << tom->get_cost() << endl;
                         cout << "12." << tuna->get_topping() << setw(21) << "$" << tuna->get_cost() << endl;
 	
 	while(add_more) {

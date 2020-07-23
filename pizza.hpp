@@ -1,12 +1,16 @@
-#ifndef __PIZZA_HPP__
-#define __PIZZA_HPP__
+#ifndef __PIZZA_DECORATOR_HPP__
+#define __PIZZA_DECORATOR_HPP__
 
+#include "base_pizza.hpp"
 #include <string>
 
-class Pizza {
+
+class Pizza: public Base_Pizza {
+	protected:
+		Base_Pizza* base_pizza;
 	public:
 		//Constructors
-		Pizza() {};
+		Pizza(Base_Pizza* base) { base_pizza = base; }
 
 		//Functions
 		virtual std::string get_topping() = 0;
@@ -14,4 +18,4 @@ class Pizza {
 		
 };
 
-#endif	// __PIZZA_HPP__
+#endif	// __PIZZA_DECORATOR_HPP__

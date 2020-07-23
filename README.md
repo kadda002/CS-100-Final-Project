@@ -29,10 +29,10 @@ Zachary Hill        email: zhill003@ucr.edu
    Factory Design Patterns, and Zach is going to implement Decorator Design Patterns.
 
    Abstract Factory Design:
-   
+      The Abstract Factory class is designed to 
    
    Decorator Design:
-      The Decorator class is primarily focused on adding the toppings to the base pizza chosen by the user. We have twelve classes each containing a different topping(2 sea foods, 3 meats, and 7 veggies) which can be added to a pizza multiple times but the name is only called once.
+      The Decorator class is primarily focused on adding the toppings to the base pizza chosen by the user. We have twelve classes each containing a different topping(2 sea foods, 3 meats, and 7 veggies) which can be added to a pizza multiple times but the name is only called once. Each group of toppings has its own set price that will be added to the total cost, in addition to the base pizza price, even if the users asks for extras of the same topping.
    
    Visitor Design:
    

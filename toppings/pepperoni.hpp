@@ -4,7 +4,7 @@
 #include "toppings_decorator.hpp"
 #include <iostream>
 #include <string>
-
+#include "../visitor.hpp"
 class Pepperoni : public ToppingsDecorator{
 	private:
 		std::string topping_name = "Pepperoni";
@@ -16,6 +16,12 @@ class Pepperoni : public ToppingsDecorator{
 		//Functions
 		std::string get_topping() { return topping_name; }
 		double get_cost() { return topping_cost; }
+		
+		void accept(Visitor* V) {
+                        V->visit_pepperoni(this);
+                }
+
+
 };
 
 #endif	// __PEPPERONI_HPP__

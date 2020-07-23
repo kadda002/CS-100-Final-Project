@@ -4,6 +4,8 @@
 #include "../pizza.hpp"
 #include <iostream>
 #include <string>
+#include "../visitor.hpp"
+#include "../visitor.hpp"
 
 class ToppingsDecorator : public Pizza {
 	protected:

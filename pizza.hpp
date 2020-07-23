@@ -2,6 +2,8 @@
 #define __PIZZA_HPP__
 
 #include <string>
+#include "visitor.hpp"
+
 using namespace std;
 #include "Factory_comp/components.hpp"
 class Pizza {
@@ -47,6 +49,10 @@ class Pizza {
 		virtual std::string get_topping() = 0;
 		virtual double get_cost() = 0;
 		
+		void accept(Visitor* V) {
+			V->visit_pizza(this);
+		}; 
+
 };
 
 #endif	// __PIZZA_HPP__

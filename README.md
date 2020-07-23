@@ -29,7 +29,7 @@ Zachary Hill        email: zhill003@ucr.edu
    Factory Design Patterns, and Zach is going to implement Decorator Design Patterns.
 
    Abstract Factory Design:
-      The Abstract Factory class is designed to 
+      The Abstract Factory class is designed to allow the user to select the type of pizza like chicago, NY, and Italian.  This the selected fractory returns a pizza object which contains the crust, sauce, and cheese information. The visitor would also be able to get the prices. The user would get a prompt to select the base pizza and then the constructor selects the correct factory and outputs the pizza to be decorated.
    
    Decorator Design:
       The Decorator class is primarily focused on adding the toppings to the base pizza chosen by the user. We have twelve classes each containing a different topping(2 sea foods, 3 meats, and 7 veggies) which can be added to a pizza multiple times but the name is only called once. Each group of toppings has its own set price that will be added to the total cost, in addition to the base pizza price, even if the users asks for extras of the same topping.

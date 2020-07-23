@@ -15,7 +15,7 @@
 */
 #include "Factory_comp/components.hpp"
 
-#include "basic_pizza.hpp"
+#include "base_pizza.hpp"
 #include "pizza_factory.hpp"
 #include "Chicago_style.hpp"
 #include "NY_style.hpp"

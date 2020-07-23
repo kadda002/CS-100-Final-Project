@@ -3,18 +3,18 @@
 
 #include "Factory_comp/components.hpp"
 
-#include "basic_pizza.hpp"
+#include "base_pizza.hpp"
 #include "pizza_factory.hpp"
 #include "Chicago_style.hpp"
 #include "NY_style.hpp"
 #include "Italian_style.hpp"
 #include "toppings/toppings.hpp"
-#include "pizza_decorator.hpp"
+#include "pizza.hpp"
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	Pizza_Decorator* d_pizza;
+	Pizza* d_pizza;
 
 	Anchovy* anch; BellPepper* bell; Chicken* chicken; Meatball* mb; Mushroom* mush; Olive* olive;
         Onion* onion; Pepperoni* pepp; Salami* sal; Spinach* spinach; Tomato* tom; Tuna* tuna;

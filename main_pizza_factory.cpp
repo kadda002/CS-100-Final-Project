@@ -20,6 +20,7 @@
 #include "Chicago_style.hpp"
 #include "NY_style.hpp"
 #include "Italian_style.hpp"
+#include "pizza.hpp"
 using namespace std;
 
 int main() {
@@ -46,7 +47,7 @@ int main() {
 			cout << "Wrong input Exiting" << endl;
 			return 0;
 		}
-		Base_Pizza* pizza = f_pizza -> get_pizza();
+		Pizza* pizza = f_pizza -> get_pizza();
 		pizza -> test_details();
 
 	return 0;

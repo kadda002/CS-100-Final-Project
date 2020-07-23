@@ -7,7 +7,7 @@
 
 class BellPepper : public ToppingsDecorator{
 	private:
-		std::string topping_name = "YellowBellPepper";
+		std::string topping_name = "Yellow Bell Pepper";
 		double topping_cost = 1.55; 
 	public:
 		//Constructor

@@ -10,6 +10,7 @@ using namespace std;
 #include "Factory_comp/Italian_sa.hpp"
 #include "Factory_comp/Mixed_ch.hpp"
 #include "Factory_comp/Thick_cr.hpp"
+#include "pizza.hpp"
 class Italian_Style_Pizza : public Pizza_Factory {
                 Crust* get_Crust(){
                 	return new Thick_Crust();

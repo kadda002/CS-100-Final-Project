@@ -3,7 +3,7 @@
 
 #include <string>
 using namespace std;
-
+#include "Factory_comp/components.hpp"
 class Chicago_Style_Pizza;
 class Italian_Style_Pizza;
 class NY_Style_Pizza;

@@ -11,15 +11,11 @@ class Tomato : public ToppingsDecorator{
 		double topping_cost = 1.55; 
 	public:
 		//Constructor
-		Tomato(Pizza_Decorator *tom):ToppingsDecorator(tom) {};
+		Tomato(Pizza *tom):ToppingsDecorator(tom) {};
 
 		//Functions
 		std::string get_topping() { return topping_name; }
 		double get_cost() { return topping_cost; }
-		void traverse() {
-                        //ToppingsDecorator->traverse();
-                        cout << top->get_topping() << " ";
-                }
 };
 
 #endif	// __TOMATO_HPP__

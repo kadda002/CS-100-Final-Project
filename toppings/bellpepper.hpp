@@ -11,15 +11,11 @@ class BellPepper : public ToppingsDecorator{
 		double topping_cost = 1.55; 
 	public:
 		//Constructor
-		BellPepper(Pizza_Decorator *bell):ToppingsDecorator(bell) {};
+		BellPepper(Pizza *bell):ToppingsDecorator(bell) {};
 
 		//Functions
 		std::string get_topping() { return topping_name; }
 		double get_cost() { return topping_cost; }
-		void traverse() {
-                        //ToppingsDecorator->traverse();
-                        cout << top->get_topping() << " ";
-                }
 };
 
 #endif	// __BELLPEPPER_HPP__
